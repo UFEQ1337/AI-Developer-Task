@@ -167,4 +167,80 @@ main();
   4. Zapisuje wygenerowany HTML do pliku `artykul.html` za pomocą funkcji `saveHTMLToFile`.
   5. Obsługuje ewentualne błędy na każdym etapie procesu i wyświetla odpowiednie komunikaty.
 
+## **Instrukcje Jak Uruchomić Skrypt**
 
+### **1. Wymagania Wstępne**
+
+- **Node.js**: Upewnij się, że Node.js jest zainstalowany na Twoim komputerze. Możesz pobrać go z [oficjalnej strony Node.js](https://nodejs.org/).
+
+- **Git**: Jeśli jeszcze nie masz zainstalowanego Git, pobierz go ze [strony oficjalnej Git](https://git-scm.com/downloads) i zainstaluj.
+
+### **2. Klonowanie Repozytorium**
+
+Jeśli jeszcze nie sklonowałeś repozytorium, wykonaj poniższe kroki:
+
+```bash
+git clone https://github.com/twoja-nazwa-uzytkownika/AI-Developer-Task.git
+cd AI-Developer-Task
+```
+
+Zastąp `twoja-nazwa-uzytkownika` odpowiednią nazwą użytkownika na GitHub oraz `AI-Developer-Task` nazwą Twojego repozytorium.
+
+### **3. Instalacja Zależności**
+
+W katalogu projektu uruchom następujące polecenie, aby zainstalować wszystkie niezbędne zależności:
+
+```bash
+npm install
+```
+
+To polecenie zainstaluje moduły wymienione w pliku `package.json`, takie jak `dotenv` i `axios`.
+
+### **4. Konfiguracja Pliku `.env`**
+
+Utwórz plik `.env` w głównym katalogu projektu i dodaj do niego swój klucz API OpenAI:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+Zastąp `your_openai_api_key_here` swoim rzeczywistym kluczem API dostarczonym przez OpenAI. Upewnij się, że plik `.env` jest poprawnie skonfigurowany, ponieważ jest kluczowy dla działania skryptu.
+
+### **5. Uruchomienie Skryptu**
+
+Po zainstalowaniu zależności i skonfigurowaniu pliku `.env`, możesz uruchomić skrypt za pomocą poniższego polecenia:
+
+```bash
+node app.js
+```
+
+### **6. Wynik**
+
+Po uruchomieniu skryptu:
+
+1. Skrypt pobierze artykuł z określonego URL.
+2. Prześle treść artykułu do API OpenAI w celu wygenerowania czystego HTML.
+3. Zapisze wygenerowany kod HTML do pliku `artykul.html` w głównym katalogu projektu.
+
+W konsoli zobaczysz komunikaty informujące o postępie operacji:
+
+```
+Pobieranie artykułu...
+Artykuł pobrany.
+Generowanie HTML za pomocą OpenAI...
+HTML wygenerowany.
+Zapisywanie HTML do pliku...
+Plik artykul.html został zapisany.
+```
+
+### **7. Dodatkowe Uwagi**
+
+- **Bezpieczeństwo**: Upewnij się, że plik `.env` jest wymieniony w `.gitignore`, aby nie został przypadkowo dodany do repozytorium Git. Plik `.env` zawiera wrażliwe dane, takie jak klucze API.
+
+- **Sprawdzanie Błędów**: Jeśli skrypt napotka problemy, takie jak brak klucza API lub błąd komunikacji z OpenAI, odpowiednie komunikaty błędów zostaną wyświetlone w konsoli.
+
+- **Aktualizacja Treści**: Możesz zmienić URL artykułu w funkcji `main`, aby pobierać i przekształcać różne artykuły.
+
+## **Podsumowanie**
+
+Ten skrypt automatyzuje proces przekształcania treści artykułu na czysty HTML, korzystając z mocy sztucznej inteligencji dostarczanej przez OpenAI. Dzięki temu możesz szybko generować dobrze sformatowane pliki HTML bez konieczności ręcznego kodowania. Upewnij się, że plik `.env` zawiera prawidłowy klucz API OpenAI, aby skrypt działał poprawnie.
