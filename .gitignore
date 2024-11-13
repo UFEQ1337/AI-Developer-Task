@@ -1,0 +1,6 @@
+# Ignorowane katalogi
+.idea/
+node_modules/
+
+# Ignorowane pliki konfiguracyjne
+.env
