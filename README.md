@@ -1,7 +1,5 @@
 # AI-Developer-Task
 
-## **Opis**
-
 Ten skrypt Node.js automatycznie pobiera treść artykułu z podanego URL, przesyła ją do API OpenAI (ChatGPT) w celu przekształcenia jej na czysty HTML zgodnie z określonymi wytycznymi, a następnie zapisuje wygenerowany kod HTML do pliku `artykul.html`.
 
 ## **Instrukcja Działania Kodu**
